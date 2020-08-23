@@ -12,38 +12,44 @@ import org.testng.annotations.Test;
 
 public class JenkinClass {
   @Test
-  public void wbtbl() {
+public void ExceptionMethod() {
+	  
 	  System.setProperty("webdriver.chrome.driver", "E:\\Markose\\chromedriver.exe");
 	  WebDriver driver = new ChromeDriver();
 	  
 	  driver.manage().deleteAllCookies();
-	  driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
+	  driver.manage().timeouts().pageLoadTimeout(40,TimeUnit.SECONDS);
 	  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	  
-	  driver.navigate().to("https://erail.in/trains-between-stations/mumbai-central-BCT/new-delhi-NDLS");
+	  driver.get("https://www.facebook.com/");
 	  
 	  driver.manage().window().maximize();
 	  
-	  WebElement tab = driver.findElement(By.xpath("//table[@class='DataTable DataTableHeader TrainList TrainListHeader']"));
-	  
-	  List<WebElement> rows = tab.findElements(By.tagName("tr"));
-	  
-	  System.out.println("The list of rows:" +rows.size());
-	  
-	  for(WebElement row : rows) {
+	  try {
 		  
-		  List<WebElement> cells = tab.findElements(By.tagName("td"));
+		  WebElement cust = driver.findElement(By.xpath("//label[text()='Custom1']")); 
 		  
-		  for(WebElement cell:cells) {
+		  if(cust.isDisplayed()) {
 			  
-			  String value = cell.getText();
-			  
-			  System.out.print(value);
+			  System.out.println("Element is Displayed");
 		  }
-	  System.out.println();
+		  
 	  }
 	  
-	  driver.close();
-		  }	
+	  catch(Exception e) {
+		  
+		  System.out.println("Not available");
+		  System.out.println(e.getMessage());
+	  }
+	  
+	  
+	  finally{
+		  
+		  System.out.println("I m executed");
+		  
+   		  
+	  }
+  
+driver.close();	  
   }
-
+}

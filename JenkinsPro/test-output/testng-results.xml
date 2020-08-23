@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="63660" started-at="2020-08-22T13:25:39 IST" finished-at="2020-08-22T13:26:42 IST">
+  <suite name="Default suite" duration-ms="63418" started-at="2020-08-22T13:41:23 IST" finished-at="2020-08-22T13:42:27 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="63660" started-at="2020-08-22T13:25:39 IST" finished-at="2020-08-22T13:26:42 IST">
+    <test name="Default test" duration-ms="63418" started-at="2020-08-22T13:41:23 IST" finished-at="2020-08-22T13:42:27 IST">
       <class name="Test.JenkinClass">
-        <test-method status="PASS" signature="wbtbl()[pri:0, instance:Test.JenkinClass@3fd7a715]" name="wbtbl" duration-ms="63524" started-at="2020-08-22T13:25:39 IST" finished-at="2020-08-22T13:26:42 IST">
+        <test-method status="PASS" signature="ExceptionMethod()[pri:0, instance:Test.JenkinClass@1fa121e2]" name="ExceptionMethod" duration-ms="63320" started-at="2020-08-22T13:41:23 IST" finished-at="2020-08-22T13:42:27 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wbtbl -->
+        </test-method> <!-- ExceptionMethod -->
       </class> <!-- Test.JenkinClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
